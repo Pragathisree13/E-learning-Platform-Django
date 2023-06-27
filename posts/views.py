@@ -19,7 +19,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.views.decorators.csrf import csrf_exempt
 from edureka.settings import *
 import razorpay
-client = razorpay.Client(auth=(KEY_ID, KEY_SECRET))
+client = razorpay.Client(auth=("rzp_test_1XA3B5vqwaWhQX", "Wmq8EflVAKIA561AtXWUD0Jl"))
+
 # Create your views here.
 
 def home(request):
@@ -173,6 +174,7 @@ def add_promo(request, code):
             except ObjectDoesNotExist:
                 messages.info(request, 'This coupon is not available')
                 return redirect('home')
+
 
 @csrf_exempt
 def verify_payment(request):
@@ -1173,4 +1175,22 @@ def edit_ribbon(request, id):
         ribbon = ribbonform(instance=ribbon)
 
     return render(request, "webadmin/edit_ribbon.html", {'edit':ribbon })    
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def send_message(request):
+    if request.method == 'POST':
+        # Retrieve the data from the POST request
+        message = request.POST.get('message')
+
+        # Perform any necessary operations with the message
+        # For example, you can save it to a database or send it via email
+
+        # Return a success response
+        return HttpResponse('Message sent successfully!')
+    else:
+        # If the request method is not POST, render a form to send the message
+        return render(request, 'send_message.html')
+
     

@@ -342,3 +342,16 @@ class offers(models.Model):
 
     def __str__(self):
         return self.title 
+
+
+class message(models.Model):
+    # Define your fields here
+    # For example:
+    content = models.TextField()
+    sender = models.ForeignKey(User, on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    # Add any other fields and methods as needed
+
+    def __str__(self):
+        return self.content

@@ -2,7 +2,23 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, User
 from django import forms
 from django.contrib.auth.models import Group, User
 from django.core.exceptions import ValidationError
-from .models import *
+from .models import message 
+from .models import MainCourse
+from .models import Post
+from .models import Curriculam
+from .models import features
+from .models import timing
+from .models import Category
+from .models import Customer
+from .models import video
+from .models import faq
+from .models import subcat
+from .models import blog
+from .models import blankpage
+from .models import tcforblog
+from .models import Reviews
+from .models import Cart
+from .models import offers
 from django.forms import inlineformset_factory
 
 

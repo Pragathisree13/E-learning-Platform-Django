@@ -11,13 +11,21 @@ Screenshots:-
 Features of My E-learning Platform code:-
 
 Dynamic Slider
+
 User Login/ Registration
+
 Add To Cart / Remove From Cart
+
 Add Coupons
+
 Payment Gateway Integration
+
 Custom Admin Panel
+
 User Panel
+
 Search bar
+
 Image Size Compressor
 
 a) User Panel

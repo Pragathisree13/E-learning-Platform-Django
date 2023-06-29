@@ -19,7 +19,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.views.decorators.csrf import csrf_exempt
 from edureka.settings import *
 import razorpay
-client = razorpay.Client(auth=("rzp_test_1XA3B5vqwaWhQX", "Wmq8EflVAKIA561AtXWUD0Jl"))
+client = razorpay.Client(auth=("KEY", "SECRET_KEY"))
 
 # Create your views here.
 
